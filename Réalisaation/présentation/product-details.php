@@ -179,7 +179,7 @@ $cartLineList = $cart->getCartLineList()[0];
         <main class="main-content">
 
             <!--== Start Page Header Area Wrapper ==-->
-            <section class="page-header-area pt-10 pb-9" data-bg-color="#FFF3DA">
+            <section class="page-header-area pt-10 pb-9" data-bg-color="#DEF6F8">
                 <div class="container">
                     <div class="row">
                         
@@ -196,7 +196,6 @@ $cartLineList = $cart->getCartLineList()[0];
                         <div class="col-lg-6">
                             <div class="product-details-thumb">
                                 <img src="../img/<?php echo $data->getImage() ?>" width="570" height="693" alt="Image">
-                                <span class="flag-new">new</span>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -217,14 +216,10 @@ $cartLineList = $cart->getCartLineList()[0];
                                 </div>
                                 <form action="addToCart.php" method="POST">
                                 <input type="hidden" name="id" value="<?=  $data->getId(); ?>">
-                                <div class="product-details-pro-qty">
-                                    <div class="pro-qty">
-                                        <input type="text" title="Quantity" name="quantite"  value="01">
-                                    </div>
+  
                                 </div>
                                
                                 <div class="product-details-action">
-                                    <h4 class="price"><?php echo $data->getPrice() ?> DH</h4>
                                     <div class="product-details-cart-wishlist">
                                         <button type="submit" class="btn">Add to cart</button>
                                     </div>
@@ -406,7 +401,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                             <p class="mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet consectetur.</p>
                                             <div class="product-details-pro-qty">
                                                 <div class="pro-qty">
-                                                    <input type="text" title="Quantity" value="01">
                                                 </div>
                                             </div>
                                             <div class="product-details-action">

@@ -62,7 +62,6 @@ class CartManager {
             $cartLine->setProductCartQuantity($value['productCartQuantity']);
             $product->setId($value['id_produit']);
             $product->setName($value['nom_produit']);
-            $product->setPrice($value['prix']);
             $product->setDescription($value['description']);
             $product->setDateOfExpiration($value["date_d'expiration"]);
             $product->setQuantity($value['quantite_stock']);
@@ -179,7 +178,6 @@ public function getAllProducts(){
                 $product = new Product();
                 $product->setId($value_Data['id_produit']);
                 $product->setName($value_Data['nom_produit']);
-                $product->setPrice($value_Data['prix']);
                 $product->setDescription($value_Data['description']);
                 $product->setDateOfExpiration($value_Data["date_d'expiration"]);
                 $product->setQuantity($value_Data['quantite_stock']);
@@ -207,7 +205,6 @@ public function getAllProducts(){
             foreach ($produits_data as $value) {
             $product->setId($value['id_produit']);
             $product->setName($value['nom_produit']);
-            $product->setPrice($value['prix']);
             $product->setDescription($value['description']);
             $product->setDateOfExpiration($value["date_d'expiration"]);
             $product->setQuantity($value['quantite_stock']);

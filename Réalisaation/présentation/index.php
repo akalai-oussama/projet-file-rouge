@@ -330,7 +330,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                             <i class="fa fa-star-o"></i>
                                             <i class="fa fa-star-o"></i>
                                             <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-half-o"></i>
                                         </div>
                                         <div class="reviews"><?php  echo $valuee->getCategorie_produit() ?></div>
                                     </div>
@@ -339,7 +339,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                             <a    href="product-details.php?id=<?php echo $value->getId() ?>"><?php echo $value->getName() ?></a>
                                         </h4>
                                         <div class="prices">
-                                            <span class="price"><?php echo $value->getPrice() ?> DH</span>
 
                                         </div>
                                     </div>

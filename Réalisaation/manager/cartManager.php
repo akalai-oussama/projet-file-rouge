@@ -63,6 +63,7 @@ class CartManager {
             $product->setId($value['id_produit']);
             $product->setName($value['nom_produit']);
             $product->setDescription($value['description']);
+            $product->setReference($value['reference']);      
             $product->setDateOfExpiration($value["date_d'expiration"]);
             $product->setQuantity($value['quantite_stock']);
             $product->setCategory($value['categorie_produit']);
@@ -101,6 +102,7 @@ class CartManager {
             $product->setName($value_Data['nom_produit']);
             $product->setPrice($value_Data['prix']);
             $product->setDescription($value_Data['description']);
+            $produit->setReference($value_Data['reference']);      
             $product->setDateOfExpiration($value_Data["date_d'expiration"]);
             $product->setQuantity($value_Data['quantite_stock']);
             $product->setCategory($value_Data['categorie_produit']);
@@ -144,6 +146,7 @@ class CartManager {
         $product->setName($result['nom_produit']);
         $product->setPrice($result['prix']);
         $product->setDescription($result['description']);
+        $produit->setReference($value_Data['reference']);      
         $product->setDateOfExpiration($result["date_d'expiration"]);
         $product->setQuantity($result['quantite_stock']);
         $product->setCategory($result['categorie_produit']);
@@ -179,6 +182,7 @@ public function getAllProducts(){
                 $product->setId($value_Data['id_produit']);
                 $product->setName($value_Data['nom_produit']);
                 $product->setDescription($value_Data['description']);
+                $product->setReference($value_Data['reference']);      
                 $product->setDateOfExpiration($value_Data["date_d'expiration"]);
                 $product->setQuantity($value_Data['quantite_stock']);
                 $product->setCategory($value_Data['categorie_produit']); 
@@ -206,6 +210,7 @@ public function getAllProducts(){
             $product->setId($value['id_produit']);
             $product->setName($value['nom_produit']);
             $product->setDescription($value['description']);
+            $product->setReference($value['reference']);      
             $product->setDateOfExpiration($value["date_d'expiration"]);
             $product->setQuantity($value['quantite_stock']);
             $product->setCategory($value['categorie_produit']);
@@ -259,6 +264,7 @@ public function getAllProducts(){
             $product->setName($result['nom_produit']);
             $product->setPrice($result['prix']);
             $product->setDescription($result['description']);
+            $produit->setReference($value_Data['reference']);      
             $product->setDateOfExpiration($result["date_d'expiration"]);
             $product->setQuantity($result['quantite_stock']);
             $product->setCategory($result['categorie_produit']);

@@ -6,6 +6,7 @@ class Product{
     private $price ; 
     private $id ; 
     private $description;
+    private $Reference;
     private $quantity;
     private $dateOfExpiration;
     private $category;
@@ -33,12 +34,19 @@ class Product{
         $this->price = $price;
     }
 
+    public function getReference() {
+        return $this->reference;
+    }
+    public function setReference($reference) {
+        $this->reference = $reference;
+    }
     public function getDescription() {
         return $this->description;
     }
     public function setDescription($description) {
         $this->description = $description;
     }
+
 
 
     public function getQuantity() {

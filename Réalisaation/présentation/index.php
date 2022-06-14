@@ -79,7 +79,7 @@ $cartLineList = $cart->getCartLineList()[0];
                         <div class="col-5 col-lg-2 col-xl-1">
                             <div class="header-logo">
                                 <a href="index.php">
-                                    <img class="logo-main" src="../assets/images/logo.webp" width="95" height="68"
+                                    <img class="logo-main" src="../img/logo1.png" width="400" height="120"
                                         alt="Logo" />
                                 </a>
                             </div>
@@ -381,7 +381,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                 <div class="widget-item">
                                     <div class="widget-about">
                                         <a class="widget-logo" href="index.php">
-                                            <img src="../assets/images/logo.webp" width="95" height="68" alt="Logo">
+                                            <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                         </a>
                                         <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting
                                             industry. Lorem Ipsum has been.</p>
@@ -586,7 +586,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                                     </div>
                                                 </div>
                                                 <div class="product-details-action">
-                                                    <h4 class="price"><?php echo $value->getPrice() ?> DH</h4>
                                                     <div class="product-details-cart-wishlist">
                                                         <button type="button" class="btn" data-bs-toggle="modal"
                                                             data-bs-target="#action-CartAddModal">Add to cart</button>
@@ -609,7 +608,7 @@ $cartLineList = $cart->getCartLineList()[0];
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
                     <h1 class="d-none" id="offcanvasRightLabel">Shopping Cart</h1>
-                    <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">Shopping Cart <i
+                    <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">mes informations <i
                             class="fa fa-chevron-right"></i></button>
                 </div>
                 <div class="offcanvas-body">
@@ -632,12 +631,9 @@ $cartLineList = $cart->getCartLineList()[0];
                                     alt="Image">
                                 <span class="product-title"><?= $value->getProduct()->getName() ?></span>
                             </a>
-                            <span class="product-price"><?=$value->getProductCartQuantity()?> ×
-                                <?= $value->getProduct()->getPrice() ?> DH</span>
                         </li>
                         <?php } }?>
                     </ul>
-                    <p class="cart-total"><span>Subtotal:</span><span class="amount"><?= $totalPrice?> DH</span></p>
                     <a class="btn-total" href="product-cart.php">View cart</a>
                     <a class="btn-total" href="product-checkout.php">Checkout</a>
                 </div>

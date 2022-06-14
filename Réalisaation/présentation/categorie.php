@@ -67,7 +67,7 @@ $data = $gestion->afficherCatigories();
                     <div class="col-5 col-lg-2 col-xl-1">
                         <div class="header-logo">
                             <a href="index.php">
-                                <img class="logo-main" src="../assets/images/logo.webp" width="95" height="68" alt="Logo" />
+                                <img class="logo-main" src="../img/logo1.png" width="95" height="68" alt="Logo" />
                             </a>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ $data = $gestion->afficherCatigories();
         <main class="main-content">
 
             <!--== Start Page Header Area Wrapper ==-->
-            <section class="page-header-area pt-10 pb-9" data-bg-color="#FFF3DA">
+            <section class="page-header-area pt-10 pb-9" data-bg-color="#DEF6F8">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5">
@@ -259,7 +259,6 @@ $data = $gestion->afficherCatigories();
                                     </div>
                                     <h4 class="title"><a href="product-details.php"><?php echo $valuee->getNom_Produit() ?></a></h4>
                                     <div class="prices">
-                                        <span class="price"><?php echo $valuee->getPrix() ?>DH</span>
                                     </div>
                                 </div>
                                 <div class="product-action-bottom">
@@ -296,7 +295,7 @@ $data = $gestion->afficherCatigories();
                             <div class="widget-item">
                                 <div class="widget-about">
                                     <a class="widget-logo" href="index.php">
-                                        <img src="../assets/images/logo.webp" width="95" height="68" alt="Logo">
+                                        <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                     </a>
                                     <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                                 </div>

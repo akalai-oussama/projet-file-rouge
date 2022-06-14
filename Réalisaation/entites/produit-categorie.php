@@ -34,7 +34,12 @@ class Produit_Categorie{
     public function setDescription($Description) {
         $this->Description = $Description;
     }
-   
+    public function getReference() {
+        return $this->Reference;
+    }
+    public function setReference($Reference) {
+        $this->Reference = $Reference;
+    }
     public function getCategorie_produit() {
         return $this->Categorie;
     }

@@ -65,7 +65,7 @@ $cartLineList = $cart->getCartLineList()[0];
                     <div class="col-5 col-lg-2 col-xl-1">
                         <div class="header-logo">
                             <a href="index.php">
-                                <img class="logo-main" src="../assets/images/logo.webp" width="95" height="68" alt="Logo" />
+                                <img class="logo-main" src="../img/logo1.png" width="95" height="68" alt="Logo" />
                             </a>
                         </div>
                         <div class="col-lg-7 col-xl-7 d-none d-lg-block">
@@ -147,7 +147,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <rect class="icon-rect" width="30" height="30" fill="url(#pattern3)" />
                                             <defs>
                                                 <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1"
                                                     height="1">
@@ -197,9 +196,8 @@ $cartLineList = $cart->getCartLineList()[0];
                                         <th class="product-remove">&nbsp;</th>
                                         <th class="product-thumbnail">&nbsp;</th>
                                         <th class="product-name">Product</th>
-                                        <th class="product-price">Price</th>
-                                        <th class="product-quantity">Quantity</th>
-                                        <th class="product-subtotal">Total</th>
+                                        <th class="product-price">réference</th>
+                                        <th class="product-quantity">catégorie</th>
                                     </tr>
                                 </thead>
                 
@@ -232,16 +230,12 @@ $cartLineList = $cart->getCartLineList()[0];
                                             <a class="title" href="single-product.php?id=<?php echo $value->getIdCartLine()?>"><?= $value->getProduct()->getName() ?></a>
                                         </td>
                                         <td class="product-price">
-                                            <span class="price"><?= $value->getProduct()->getPrice() ?> DH</span>
+                                        <a class="title" href="<?= $value->getProduct()->getReference() ?>"><?= $value->getProduct()->getReference() ?></a>
                                         </td>
                                         <td class="product-quantity">
                                                 <div class="pro-qty-detail">
-                                                    <input type="hidden" name="id" value="<?=$value->getIdCartLine();?>">
-                                                    <input disabled type="text" name="quantity" class="quantity" title="Quantity" value="<?=$value->getProductCartQuantity()?>">
+                                                <a class="title" href="single-product.php?id=<?php echo $value->getIdCartLine()?>"><?= $value->getProduct()->getCategory() ?></a>
                                                 </div>
-                                        </td>
-                                        <td class="product-subtotal">
-                                            <span class="price"><?= $value->getProduct()->getPrice() * $value->getProductCartQuantity()?> DH</span>
                                         </td>
                                     </tr>
                                   <?php } }?>
@@ -251,47 +245,15 @@ $cartLineList = $cart->getCartLineList()[0];
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6">
-                            <div class="coupon-wrap">
-                                <h4 class="title">Coupon</h4>
-                                <p class="desc">Enter your coupon code if you have one.</p>
-                                <input type="text" class="form-control" placeholder="Coupon code">
-                                <button type="button" class="btn-coupon">Apply coupon</button>
-                            </div>
-                        </div>
+
                         <div class="col-12 col-lg-6">
-                            <div class="cart-totals-wrap">
-                                <h2 class="title">Cart totals</h2>
-                                <table>
-                                    <tbody>
-                                        <tr class="cart-subtotal">
-                                            <th>Subtotal</th>
+                            
                                             <td>
-                                                <span class="amount"><?=  $totalPrice?> DH</span>
-                                            </td>
-                                        </tr>
-                                        <tr class="shipping-totals">
-                                            <th>Shipping</th>
-                                            <td>
-                                                <ul class="shipping-list">
-                                                    <li class="radio">
-                                                        <input type="radio" checked name="shipping" id="radio1" checked>
-                                                        <label for="radio1">Flat rate: <span>3.00 DH</span></label>
-                                                    </li>
-                                                </ul>
-                                                <p class="destination">Shipping to <strong>USA</strong>.</p>
-                                                <a href="javascript:void(0)" class="btn-shipping-address">Change address</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="order-total">
-                                            <th>Total</th>
-                                            <td>
-                                                <span class="amount"><?=  $totalPrice + 3?> DH</span>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div class="text-end">
-                                    <a href="shop-checkout.php" class="checkout-button">Proceed to checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +274,7 @@ $cartLineList = $cart->getCartLineList()[0];
                             <div class="widget-item">
                                 <div class="widget-about">
                                     <a class="widget-logo" href="index.php">
-                                        <img src="../assets/images/logo.webp" width="95" height="68" alt="Logo">
+                                        <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                     </a>
                                     <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                                 </div>

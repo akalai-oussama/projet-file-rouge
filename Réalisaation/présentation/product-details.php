@@ -79,7 +79,7 @@ $cartLineList = $cart->getCartLineList()[0];
                     <div class="col-5 col-lg-2 col-xl-1">
                         <div class="header-logo">
                             <a href="index.php">
-                                <img class="logo-main" src="../assets/images/logo.webp" width="95" height="68" alt="Logo" />
+                                <img class="logo-main" src="../img/logo1.png" width="95" height="68" alt="Logo" />
                             </a>
                         </div>
                     </div>
@@ -214,6 +214,18 @@ $cartLineList = $cart->getCartLineList()[0];
                                     </div>
 
                                 </div>
+                                <div class="product-details-qty-list">
+                                    
+
+                                    <div class="qty-list-check">
+                                        
+                                        <label class="form-check-label" for="qtyList2"> <b>Les références :<br></b> <span class="extra-offer"></label><br>
+                                        <label class="form-check-label" for="qtyList1"><a href="<?php echo $data->getReference() ?>"><?php echo $data->getReference() ?></a></label>
+
+                                    
+                                    </div>
+
+                                </div>
                                 <form action="addToCart.php" method="POST">
                                 <input type="hidden" name="id" value="<?=  $data->getId(); ?>">
   
@@ -239,7 +251,7 @@ $cartLineList = $cart->getCartLineList()[0];
                             <div class="widget-item">
                                 <div class="widget-about">
                                     <a class="widget-logo" href="index.php">
-                                        <img src="../assets/images/logo.webp" width="95" height="68" alt="Logo">
+                                        <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                     </a>
                                     <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                                 </div>

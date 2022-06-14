@@ -29,7 +29,8 @@ class Gestion{
                    $produit->setId_Produit($value_Data['id_produit']);   
                    $produit->setPrix($value_Data['prix']);   
                    $produit->setNom_Produit($value_Data['nom_produit']);   
-                   $produit->setDescription($value_Data['description']);   
+                   $produit->setDescription($value_Data['description']); 
+                   $produit->setReference($value_Data['reference']);        
                    $produit->setDate_dexpiration($value_Data["date_d'expiration"]);   
                    $produit->setCategorie_produit($value_Data["categorie_produit"]);   
                    $produit->setQuantite_stock($value_Data["quantite_stock"]);   
@@ -48,13 +49,14 @@ class Gestion{
        $Prix = $produit->getPrix();   
        $Nom_produit =  $produit->getNom_Produit();   
        $Description = $produit->getDescription();   
+       $Reference = $produit->getReference();
        $Date_dexpiration = $produit->getDate_dexpiration();   
        $Categorie_produit = $produit->getCategorie_produit();   
        $Quantite_stock = $produit->getQuantite_stock();    
        $photo = $produit->getPhoto();    
         // requête SQL
-        $insertRow="INSERT INTO produit(`id_produit`, `nom_produit`, `prix`, `description`, `quantite_stock`, `date_d'expiration`, `categorie_produit`,photo) 
-                      VALUES('$idProduit', '$Nom_produit' ,'$Prix' , '$Description'  , '$Quantite_stock' ,'$Date_dexpiration' ,'$Categorie_produit','$photo')";
+        $insertRow="INSERT INTO produit(`id_produit`, `nom_produit`, `prix`, `description`,`reference`, `quantite_stock`, `date_d'expiration`, `categorie_produit`,photo) 
+                      VALUES('$idProduit', '$Nom_produit' ,'$Prix' , '$Description'  ,'$Reference', '$Quantite_stock' ,'$Date_dexpiration' ,'$Categorie_produit','$photo')";
 
         mysqli_query($this->getConnection(), $insertRow);
     }
@@ -98,7 +100,8 @@ class Gestion{
                    $produit->setId_Produit($value_Data['id_produit']); 
                    $produit->setNom_Produit($value_Data['nom_produit']);   
                    $produit->setPrix($value_Data['prix']);                      
-                   $produit->setDescription($value_Data['description']);   
+                   $produit->setDescription($value_Data['description']);
+                   $produit->setReference($value_Data['reference']);         
                    $produit->setDate_dexpiration($value_Data["date_d'expiration"]);   
                    $produit->setCategorie_produit($value_Data["categorie_produit"]);   
                    $produit->setQuantite_stock($value_Data["quantite_stock"]); 
@@ -120,12 +123,13 @@ class Gestion{
         $Prix = $produit->getPrix();   
         $Nom_produit =  $produit->getNom_Produit();   
         $Description = $produit->getDescription();   
+        $Reference = $produit->getReference();
         $Date_dexpiration = $produit->getDate_dexpiration();   
         $Quantite_stock = $produit->getQuantite_stock();    
         $photo = $produit->getPhoto(); 
 
         $RowUpdate = "UPDATE produit SET 
-        nom_produit='$Nom_produit',prix = '$Prix', `description`= '$Description',quantite_stock = '$Quantite_stock', `date_d'expiration` = '$Date_dexpiration',photo='$photo' WHERE  id_produit = $id" ;
+        nom_produit='$Nom_produit',prix = '$Prix', `description`= '$Description',`reference`= '$Reference',quantite_stock = '$Quantite_stock', `date_d'expiration` = '$Date_dexpiration',photo='$photo' WHERE  id_produit = $id" ;
 
         mysqli_query($this->getConnection(),$RowUpdate);
     }

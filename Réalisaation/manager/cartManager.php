@@ -64,8 +64,6 @@ class CartManager {
             $product->setName($value['nom_produit']);
             $product->setDescription($value['description']);
             $product->setReference($value['reference']);      
-            $product->setDateOfExpiration($value["date_d'expiration"]);
-            $product->setQuantity($value['quantite_stock']);
             $product->setCategory($value['categorie_produit']);
             $product->setImage($value["photo"]);   
 
@@ -183,8 +181,6 @@ public function getAllProducts(){
                 $product->setName($value_Data['nom_produit']);
                 $product->setDescription($value_Data['description']);
                 $product->setReference($value_Data['reference']);      
-                $product->setDateOfExpiration($value_Data["date_d'expiration"]);
-                $product->setQuantity($value_Data['quantite_stock']);
                 $product->setCategory($value_Data['categorie_produit']); 
                 $product->setImage($value_Data["photo"]);   
                 array_push($TableData, $product);
@@ -211,8 +207,6 @@ public function getAllProducts(){
             $product->setName($value['nom_produit']);
             $product->setDescription($value['description']);
             $product->setReference($value['reference']);      
-            $product->setDateOfExpiration($value["date_d'expiration"]);
-            $product->setQuantity($value['quantite_stock']);
             $product->setCategory($value['categorie_produit']);
             $product->setImage($value["photo"]);   
 

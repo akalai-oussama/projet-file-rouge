@@ -118,7 +118,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <rect class="icon-rect" width="30" height="30" fill="url(#pattern1)" />
                                             <defs>
                                                 <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1"
                                                     height="1">
@@ -191,71 +190,28 @@ $cartLineList = $cart->getCartLineList()[0];
 
                 <!--== Start Hero Area Wrapper ==-->
                 <section class="hero-slider-area position-relative">
-                    <div class="swiper hero-slider-container">
-                        <div class="swiper-wrapper">
                             <div class="swiper-slide hero-slide-item">
                                 <div class="container">
                                     <div class="row align-items-center position-relative">
                                         <div class="col-12 col-md-6">
                                             <div class="hero-slide-content">
-                                                <div class="hero-slide-text-img"><img
-                                                        src="../assets/images/slider/text-theme.webp" width="427"
-                                                        height="232" alt="Image"></div>
+
                                                 <h2 class="hero-slide-title">CLEAN FRESH</h2>
                                                 <p class="hero-slide-desc">Lorem ipsum dolor sit amet, consectetur
                                                     adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
-                                                <a class="btn btn-border-dark" href="index.php">BUY NOW</a>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="hero-slide-thumb">
-                                                <img src="../img/ezgif.com-gif-maker.png" width="841" height="832"
-                                                    alt="Image">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="hero-slide-text-shape"><img src="../assets/images/slider/text1.webp" width="70"
-                                        height="955" alt="Image"></div>
-                                <div class="hero-slide-social-shape"></div>
-                            </div>
-                            <div class="swiper-slide hero-slide-item">
-                                <div class="container">
-                                    <div class="row align-items-center position-relative">
-                                        <div class="col-12 col-md-6">
-                                            <div class="hero-slide-content">
-                                                <div class="hero-slide-text-img"><img
-                                                        src="../assets/images/slider/text-theme.webp" width="427"
-                                                        height="232" alt="Image"></div>
-                                                <h2 class="hero-slide-title">Facial Cream</h2>
-                                                <p class="hero-slide-desc">Lorem ipsum dolor sit amet, consectetur
-                                                    adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
-                                                <a class="btn btn-border-dark" href="index.php">BUY NOW</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <div class="hero-slide-thumb">
-                                                <img src="../assets/images/slider/slider2.webp" width="841" height="832"
-                                                    alt="Image">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="hero-slide-text-shape"><img src="../assets/images/slider/text1.webp" width="70"
-                                        height="955" alt="Image"></div>
-                                <div class="hero-slide-social-shape"></div>
-                            </div>
                         </div>
                         <!--== Add Pagination ==-->
                         <div class="hero-slider-pagination"></div>
                     </div>
-                    <div class="hero-slide-social-media">
-                        <a href="https://www.pinterest.com/" target="_blank" rel="noopener"><i
-                                class="fa fa-pinterest-p"></i></a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i
-                                class="fa fa-facebook"></i></a>
-                    </div>
+
                 </section>
                 <!--== End Hero Area Wrapper ==-->
 
@@ -285,9 +241,8 @@ $cartLineList = $cart->getCartLineList()[0];
                         <div class="row">
                             <div class="col-12">
                                 <div class="section-title text-center">
-                                    <h2 class="title">Top sale</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
-                                        amet luctus venenatis</p>
+                                    <h2 class="title">Top formation</h2>
+                                    <p>Il s’agit de la formation la plus utilisée ou la plus recherchée. </p>
                                 </div>
                             </div>
                         </div>
@@ -314,7 +269,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                                 data-id=<?php echo $value->getId()?>
                                                 data-product-image=<?php echo urlencode($value->getImage())?>
                                                 data-product-name=<?php echo urlencode($value->getName())?>>
-                                                <span>Add to cart</span>
+                                                <span>ajouter à favoriser</span>
                                             </button>
                                             <button type="button" class="product-action-btn action-btn-wishlist"
                                                 data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
@@ -326,13 +281,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                     <div class="product-info">
                                     <div class="product-rating">
                                         <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
                                         </div>
-                                        <div class="reviews"><?php  echo $valuee->getCategorie_produit() ?></div>
                                     </div>
                                    
                                                                            <h4 id="test" class="title">
@@ -353,7 +302,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                         </button>
                                         <button type="button" class="product-action-btn action-btn-cart"
                                             data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
+                                            <span>ajouter à favoriser</span>
                                         </button>
                                     </div>
                                 </div>
@@ -383,8 +332,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                         <a class="widget-logo" href="index.php">
                                             <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                         </a>
-                                        <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                            industry. Lorem Ipsum has been.</p>
+        
                                     </div>
                                 </div>
                             </div>
@@ -393,12 +341,9 @@ $cartLineList = $cart->getCartLineList()[0];
                                     <h4 class="widget-title">Information</h4>
                                     <ul class="widget-nav">
 
-                                        <li><a href="contact.php">Contact</a></li>
-                                        <li><a href="faq.php">Privacy</a></li>
                                         <li><a href="my-account.php">Login</a></li>
-                                        <li><a href="#">Shop</a></li>
+                                        <li><a href="#">home</a></li>
                                         <li><a href="my-account.php">My Account</a></li>
-                                        <li><a href="faq.php">FAQs</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -588,7 +533,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                                 <div class="product-details-action">
                                                     <div class="product-details-cart-wishlist">
                                                         <button type="button" class="btn" data-bs-toggle="modal"
-                                                            data-bs-target="#action-CartAddModal">Add to cart</button>
+                                                            data-bs-target="#action-CartAddModal">ajouter à favoriser</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -634,8 +579,7 @@ $cartLineList = $cart->getCartLineList()[0];
                         </li>
                         <?php } }?>
                     </ul>
-                    <a class="btn-total" href="product-cart.php">View cart</a>
-                    <a class="btn-total" href="product-checkout.php">Checkout</a>
+                    <a class="btn-total" href="product-cart.php">voir favouriser</a>
                 </div>
             </aside>
             <!--== End Aside Cart ==-->

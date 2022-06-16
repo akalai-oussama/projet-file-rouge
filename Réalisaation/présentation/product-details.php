@@ -89,23 +89,12 @@ $cartLineList = $cart->getCartLineList()[0];
                                 <li class="has-submenu"><a href="index.php">home</a>
                                         
                                 </li>
-                                <li><a href="about-us.php">about</a></li>
-                                <li class="has-submenu position-static"><a href="#">shop</a>
-                                    <ul class="submenu-nav-mega">
-                                        <li><a href="#/" class="mega-title">categories</a>
-                                            <ul>
-                                                
-                                                <li><a href="hare-care.php">Hare care</a></li>
-                                                <li><a href="Face-care.php">Face care</a></li>
-                                                <li><a href="blusher.php">Blusher</a></li>
-                                            </ul>
-                                        </li>
+
                                        
                                       
                                     </ul>
                                 </li>
                                 
-                                <li><a href="contact.php">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -233,7 +222,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                
                                 <div class="product-details-action">
                                     <div class="product-details-cart-wishlist">
-                                        <button type="submit" class="btn">Add to cart</button>
+                                        <button type="submit" class="btn">ajouter â favoriser</button>
                                     </div>
                                 </div>
                                 </form>
@@ -253,7 +242,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                     <a class="widget-logo" href="index.php">
                                         <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                     </a>
-                                    <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -261,14 +250,8 @@ $cartLineList = $cart->getCartLineList()[0];
                             <div class="widget-item">
                                 <h4 class="widget-title">Information</h4>
                                 <ul class="widget-nav">
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="about-us.html">About us</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="faq.html">Privacy</a></li>
                                     <li><a href="account-login.html">Login</a></li>
-                                    <li><a href="product.html">Shop</a></li>
-                                    <li><a href="my-account.html">My Account</a></li>
-                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="product.html">home</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -473,7 +456,6 @@ $cartLineList = $cart->getCartLineList()[0];
         <aside class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h1 class="d-none" id="offcanvasExampleLabel">Aside Menu</h1>
-                <button class="btn-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">menu <i class="fa fa-chevron-left"></i></button>
             </div>
             <div class="offcanvas-body">
                 <div id="offcanvasNav" class="offcanvas-menu-nav">
@@ -483,9 +465,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                 <li><a href="index.php">Home One</a></li>
                             </ul>
                         </li>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="about-us.html">about</a></li>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">shop</a>
-                            <ul>
+                        <a href="about-us.php">about</a>                            <ul>
                                 <li><a href="#" class="offcanvas-nav-item">Shop Layout</a>
                                     <ul>
                                         <li><a href="product.html">Shop 3 Column</a></li>

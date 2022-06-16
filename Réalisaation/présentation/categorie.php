@@ -77,25 +77,10 @@ $data = $gestion->afficherCatigories();
                                 <li class="has-submenu"><a href="index.php">home</a>
                                         
                                 </li>
-                                <li><a href="about-us.php">about</a></li>
-                                <li class="has-submenu position-static"><a href="#">shop</a>
                                     <ul class="submenu-nav-mega">
-                                        <li><a href="#/" class="mega-title">categories</a>
                                             <ul>
                                                 
-                                                <li><a href="hare-care.php">Front end</a></li>
-                                                <li><a href="Face-care.php">Back end</a></li>
-                                                <li><a href="blusher.php">Design</a></li>
-                                                <li><a href="lip-stick.php">Lip stick</a></li>
-                                                <li><a href="skin-care.php">Skin care</a></li>
-                                            </ul>
-                                        </li>
-                                       
-                                      
-                                    </ul>
-                                </li>
-                                
-                                <li><a href="contact.php">Contact</a></li>
+ 
                             </ul>
                         </div>
                     </div>
@@ -171,7 +156,6 @@ $data = $gestion->afficherCatigories();
                             </div>
                         </div>
                         <div class="col-md-7">
-                            <h5 class="showing-pagination-results mt-5 mt-md-9 text-center text-md-end">Showing 09 Results</h5>
                         </div>
                     </div>
                 </div>
@@ -239,7 +223,7 @@ $data = $gestion->afficherCatigories();
                                             <i class="fa fa-expand"></i>
                                         </button>
                                         <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                            <span>Add to cart</span>
+                                            <span>Ajouter â favoriser</span>
                                         </button>
                                         <button type="button" class="product-action-btn action-btn-wishlist" data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                             <i class="fa fa-heart-o"></i>
@@ -249,11 +233,6 @@ $data = $gestion->afficherCatigories();
                                 <div class="product-info">
                                     <div class="product-rating">
                                         <div class="rating">
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-half-o"></i>
                                         </div>
                                         <div class="reviews"><?php  echo $valuee->getCategorie_produit() ?></div>
                                     </div>
@@ -269,7 +248,7 @@ $data = $gestion->afficherCatigories();
                                         <i class="fa fa-heart-o"></i>
                                     </button>
                                     <button type="button" class="product-action-btn action-btn-cart" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
-                                        <span>Add to cart</span>
+                                        <span>Ajouter â favoriser</span>
                                     </button>
                                 </div>
                             </div>
@@ -297,7 +276,6 @@ $data = $gestion->afficherCatigories();
                                     <a class="widget-logo" href="index.php">
                                         <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                     </a>
-                                    <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                                 </div>
                             </div>
                         </div>
@@ -305,14 +283,8 @@ $data = $gestion->afficherCatigories();
                             <div class="widget-item">
                                 <h4 class="widget-title">Information</h4>
                                 <ul class="widget-nav">
-                                    <li><a href="blog.php">Blog</a></li>
-                                    <li><a href="about-us.php">About us</a></li>
-                                    <li><a href="contact.php">Contact</a></li>
-                                    <li><a href="faq.php">Privacy</a></li>
                                     <li><a href="my-account.php">Login</a></li>
-                                    <li><a href="#">Shop</a></li>
-                                    <li><a href="my-account.php">My Account</a></li>
-                                    <li><a href="faq.php">FAQs</a></li>
+                                    <li><a href="#">home</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -463,7 +435,7 @@ $data = $gestion->afficherCatigories();
                                             <div class="product-details-action">
                                                 <h4 class="price">$254.22</h4>
                                                 <div class="product-details-cart-wishlist">
-                                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">Add to cart</button>
+                                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">Ajouter â favoriser</button>
                                                 </div>
                                             </div>
                                         </div>

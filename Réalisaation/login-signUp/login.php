@@ -8,7 +8,7 @@ $authManager = new AuthenticationManager();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: ../index.php");
+    header("location: ../présentation/index.php");
     exit;
 }
  
@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $hasLoging = $authManager->login($password, $email);
         if($hasLoging == true){
             // Redirect user to welcome page
-              header("location: ../index.php");
+              header("location: ../présentation/index.php");
         } else{
           // Password is not valid, display a generic error message
             $login_err = "Invalid email or password.";

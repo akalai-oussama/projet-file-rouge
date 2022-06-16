@@ -126,9 +126,7 @@
                                             <tr>
                                                 <th>NOM PRODUIT</th>
                                                 <th>CATEGORIE</th>
-                                                <th>UNIT SOLD</th>
-                                                <th>QUANTITE DE STOCK</th>
-                                                <th>ACTION</th>
+                                                <th>reference</th>
                                             </tr>
                                           
                                      
@@ -141,8 +139,7 @@
                                                 
                                                       <td><?php echo $value->getNom_Produit() ?></td>
                                                       <td><?php echo $value->getNom_Categorie() ?></td>
-                                                      <td><?php echo $value->getPrix() ?></td>
-                                                      <td><?php echo $value->getQuantite_stock() ?></td>
+                                                      <td><?php echo $value->getReference() ?></td>
                                                 
                                                 
                                                 <td> 

@@ -12,7 +12,6 @@ if(isset($_POST['id'])){
     $id=$_POST['id'];
     $cartLine = new CartLine();
     $cart = new Cart();
-    $quantity =  $_POST["quantite"];
 
     $cart = $cartManager->getCart($_COOKIE['cartCookie']);
 
@@ -26,8 +25,7 @@ if(isset($_POST['id'])){
             $quantityTotal += $cartLine->getProductCartQuantity();
         }
     
-    $cartManager->addProduct($cart, $product, $quantity);
-    $product->setQuantity($quantity);
+    $cartManager->addProduct($cart, $product);
 
     $cartManager->set($cart, $product, $quantityTotal);
 

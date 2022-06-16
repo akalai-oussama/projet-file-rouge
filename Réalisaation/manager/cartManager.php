@@ -35,10 +35,10 @@ class CartManager {
   }
     
     // Add product to cart
-    public function addProduct($cart, $product, $quantity){
+    public function addProduct($cart, $product){
         $cartId = $cart->getId();
         $productId = $product->getId();
-        $sql = "INSERT INTO cart_line(idProduct,idCart, productCartQuantity) VALUES('$productId', '$cartId', '$quantity')";
+        $sql = "INSERT INTO cart_line(idProduct,idCart) VALUES('$productId', '$cartId')";
         $result = mysqli_query($this->getConnection(), $sql);
         if($result){
             $this->getConnection()->close();
@@ -74,14 +74,11 @@ class CartManager {
     }
     
     // pour ajouter session
-    public function set($cart, $product, $quantity){
+    public function set($cart, $product){
         session_start();
         $_SESSION["cart"] = $cart;
         array_push($_SESSION["product"], $product);
-        if(!isset($_SESSION["quantity"])){
-            $_SESSION["quantity"] = 0;
-        }
-        $_SESSION["quantity"] = $quantity; 
+
 
     }
 
@@ -101,8 +98,6 @@ class CartManager {
             $product->setPrice($value_Data['prix']);
             $product->setDescription($value_Data['description']);
             $produit->setReference($value_Data['reference']);      
-            $product->setDateOfExpiration($value_Data["date_d'expiration"]);
-            $product->setQuantity($value_Data['quantite_stock']);
             $product->setCategory($value_Data['categorie_produit']);
             array_push($productsList, $product);
         }

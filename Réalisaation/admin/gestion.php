@@ -27,13 +27,10 @@ class Gestion{
                    
                    $produit = new Produit_Categorie();
                    $produit->setId_Produit($value_Data['id_produit']);   
-                   $produit->setPrix($value_Data['prix']);   
                    $produit->setNom_Produit($value_Data['nom_produit']);   
                    $produit->setDescription($value_Data['description']); 
                    $produit->setReference($value_Data['reference']);        
-                   $produit->setDate_dexpiration($value_Data["date_d'expiration"]);   
                    $produit->setCategorie_produit($value_Data["categorie_produit"]);   
-                   $produit->setQuantite_stock($value_Data["quantite_stock"]);   
                    $produit->setNom_Categorie($value_Data["nom_categorie"]);   
                    array_push($TableData, $produit);
                    

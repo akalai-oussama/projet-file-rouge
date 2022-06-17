@@ -160,7 +160,7 @@ $cartLineList = $cart->getCartLineList()[0];
                 <div class="container">
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                        <li class="breadcrumb-item active" aria-current="page">formation</li>
                     </ol>
                 </div>
             </nav>
@@ -257,7 +257,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                     <a class="widget-logo" href="index.php">
                                         <img src="../img/logo1.png" width="95" height="68" alt="Logo">
                                     </a>
-                                    <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
                                 </div>
                             </div>
                         </div>
@@ -265,14 +264,7 @@ $cartLineList = $cart->getCartLineList()[0];
                             <div class="widget-item">
                                 <h4 class="widget-title">Information</h4>
                                 <ul class="widget-nav">
-                                    <li><a href="blog.php">Blog</a></li>
-                                    <li><a href="about-us.php">About us</a></li>
-                                    <li><a href="contact.php">Contact</a></li>
-                                    <li><a href="faq.php">Privacy</a></li>
-                                    <li><a href="my-account.php">Login</a></li>
-                                    <li><a href="product.php">Shop</a></li>
-                                    <li><a href="my-account.php">My Account</a></li>
-                                    <li><a href="faq.php">FAQs</a></li>
+                                <li><a href="../login-signUp/login.php">Login</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -483,7 +475,7 @@ $cartLineList = $cart->getCartLineList()[0];
             <div class="offcanvas-body">
                 <div id="offcanvasNav" class="offcanvas-menu-nav">
                     <ul>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">home</a>
+                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="../présentation/index.php">home</a>
                             <ul>
                                 <li><a href="index.php">Home One</a></li>
                                 <li><a href="index-two.php">Home Two</a></li>

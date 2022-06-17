@@ -9,13 +9,8 @@ if(isset($_GET['id'])){
 // modifier les donnes
 if(!empty($_POST)){
     $id = $_GET['id'];
-    $matriclue = $_POST['Matricule'];
     $prenom = $_POST['Prenom']; 
     $nom = $_POST['Nom'];  
-    $Date_de_naissance = $_POST['Date_de_naissance'];
-    $Departement = $_POST['Departement'];
-    $Salaire = $_POST['Salaire'];
-    $Fonction = $_POST['Fonction'];
     $Photo = $_POST['Photo'];
 
     $gestionEmployes->Modifier($id,$matriclue,$prenom,$nom,$Date_de_naissance,$Departement ,$Salaire,$Fonction ,$Photo);

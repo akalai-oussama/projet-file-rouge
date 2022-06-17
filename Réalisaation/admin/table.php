@@ -92,7 +92,7 @@
             <nav  class="navbar-sidebar">
               <ul  class="list-unstyled navbar__list">
                      
-                    <a href="../nd-admin/login-signUp/login.php">
+                    <a href="../login-signUp/login.php">
                     <i class="far fa-arrow-right-from-bracket"></i>Logout</a>
                         
                     

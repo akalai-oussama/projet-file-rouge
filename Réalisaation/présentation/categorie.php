@@ -89,7 +89,6 @@ $data = $gestion->afficherCatigories();
                             <button class="header-action-btn ms-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasSearch" aria-controls="AsideOffcanvasSearch">
                                 <span class="icon">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern1)"/>
                     <defs>
                       <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
                         <use xlink:href="#image0_504:11" transform="scale(0.0333333)"/>
@@ -103,7 +102,6 @@ $data = $gestion->afficherCatigories();
                             <button class="header-action-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasCart" aria-controls="AsideOffcanvasCart">
                                 <span class="icon">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern2)"/>
                     <defs>
                       <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
                         <use xlink:href="#image0_504:9" transform="scale(0.0333333)"/>
@@ -283,7 +281,7 @@ $data = $gestion->afficherCatigories();
                             <div class="widget-item">
                                 <h4 class="widget-title">Information</h4>
                                 <ul class="widget-nav">
-                                    <li><a href="my-account.php">Login</a></li>
+                                <li><a href="../login-signUp/login.php">Login</a></li>
                                     <li><a href="#">home</a></li>
                                 </ul>
                             </div>

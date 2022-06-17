@@ -196,9 +196,8 @@ $cartLineList = $cart->getCartLineList()[0];
                                         <div class="col-12 col-md-6">
                                             <div class="hero-slide-content">
 
-                                                <h2 class="hero-slide-title">CLEAN FRESH</h2>
-                                                <p class="hero-slide-desc">Lorem ipsum dolor sit amet, consectetur
-                                                    adipiscing elit ut aliquam, purus sit amet luctus venenatis.</p>
+                                                <h2 class="hero-slide-title">TECH-CODE</h2>
+                                                <p class="hero-slide-desc">notre site Web vous donne accès à des sites Web qui vous aident à apprendre facilement.</p>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
@@ -341,9 +340,8 @@ $cartLineList = $cart->getCartLineList()[0];
                                     <h4 class="widget-title">Information</h4>
                                     <ul class="widget-nav">
 
-                                        <li><a href="my-account.php">Login</a></li>
+                                        <li><a href="../login-signUp/login.php">Login</a></li>
                                         <li><a href="#">home</a></li>
-                                        <li><a href="my-account.php">My Account</a></li>
                                     </ul>
                                 </div>
                             </div>

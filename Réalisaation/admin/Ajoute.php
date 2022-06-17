@@ -8,27 +8,21 @@ include "gestion.php";
 $gestion= new Gestion();
 $data= $gestion->afficherCategorie();
 
-
-
 if(!empty($_POST)){
-  $filename = $_FILES["image"]["name"];
 	$produit = new produit_categorie();
-	$produit->setNom_Produit($_POST['nom_produit']);
-	$produit->setPrix($_POST['prix']);
-	$produit->setDescription($_POST['description']);
-    $produit->setReference($_POST['reference']);
-	$produit->setCategorie_produit($_POST['categorie_produit']);
-	$produit->setPhoto($filename);
+	$produit->setNom_produit($_POST['nom_produit']);
+    $produit->setReference($_POST['reference']);      
+    $produit->setDescription($_POST['description']);
+    $produit->setCategorie_produit($_POST['categorie_produit']);
 
-  $tempname = $_FILES["image"]["tmp_name"];
-
-
-
-  $gestion->AjouterProduit($produit);  
-	$gestion->upload_photo($filename, $tempname);
+	$gestion->AjouterProduit($produit);
+	
 	// Redirection vers la page index.php
 	header("Location: table.php");
 }
+
+
+
 ?>
 
 <head>
@@ -162,8 +156,8 @@ if(!empty($_POST)){
                                                 <div class="row form-group">
                                                    
                                                 </div>
-                                                <label for="cc-payment" class="control-label mb-1">Description</label>
-                                                <textarea id="cc-pament" name="descriptiont" type="date" class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
+                                                <label for="cc-payment" class="control-label mb-1">reference</label>
+                                                <textarea id="cc-pament" name="reference" type="date" class="form-control" aria-required="true" aria-invalid="false" value="100.00"> </textarea>
                                             </div>
                                             <div class="form-group">
                                                 <div class="row form-group">

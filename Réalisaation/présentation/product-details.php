@@ -86,7 +86,7 @@ $cartLineList = $cart->getCartLineList()[0];
                     <div class="col-lg-7 col-xl-7 d-none d-lg-block">
                         <div class="header-navigation ps-7">
                             <ul class="main-nav justify-content-start">
-                                <li class="has-submenu"><a href="index.php">home</a>
+                                <li class="has-submenu"><a href="../présentation/index.php">home</a>
                                         
                                 </li>
 
@@ -103,7 +103,6 @@ $cartLineList = $cart->getCartLineList()[0];
                             <button class="header-action-btn ms-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasSearch" aria-controls="AsideOffcanvasSearch">
                                 <span class="icon">
                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect class="icon-rect" width="30" height="30" fill="url(#pattern1)"/>
                     <defs>
                       <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
                         <use xlink:href="#image0_504:11" transform="scale(0.0333333)"/>
@@ -250,7 +249,7 @@ $cartLineList = $cart->getCartLineList()[0];
                             <div class="widget-item">
                                 <h4 class="widget-title">Information</h4>
                                 <ul class="widget-nav">
-                                    <li><a href="account-login.html">Login</a></li>
+                                <li><a href="../login-signUp/login.php">Login</a></li>
                                     <li><a href="product.html">home</a></li>
                                 </ul>
                             </div>
@@ -460,7 +459,7 @@ $cartLineList = $cart->getCartLineList()[0];
             <div class="offcanvas-body">
                 <div id="offcanvasNav" class="offcanvas-menu-nav">
                     <ul>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="#">home</a>
+                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="../présentation/index.php">home</a>
                             <ul>
                                 <li><a href="index.php">Home One</a></li>
                             </ul>

@@ -8,5 +8,5 @@ if(isset($_GET['id'])){
     $id = $_GET['id'] ;
     $gestion->Supprimer($id);
 
-    header('Location: index.php');
+    header('Location: table.php');
 }

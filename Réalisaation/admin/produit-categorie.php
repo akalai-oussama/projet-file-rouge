@@ -3,7 +3,6 @@
 class Produit_Categorie{
 
     private $Nom ; 
-    private $Prix ; 
     private $id ; 
     private $reference;
     
@@ -22,12 +21,6 @@ class Produit_Categorie{
     }
     
 
-    public function getPrix() {
-        return $this->Prix;
-    }
-    public function setPrix($Prix) {
-        $this->Prix = $Prix;
-    }
     public function getReference() {
         return $this->reference;
     }

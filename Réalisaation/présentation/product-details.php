@@ -8,7 +8,6 @@ $cartManager = new CartManager();
 
 $cartManager->initCode();
 
-$quantity = $cartManager->getCartQuantity();
 $cart = new Cart();
 $cart = $cartManager->getCart($_COOKIE['cartCookie']);
 
@@ -19,12 +18,10 @@ if(isset($_GET["id"])){
     
     }
 
-$quantityTotal = 0;
+
 $cartLineList = $cart->getCartLineList()[0];
 
-    foreach($cartLineList as $cartLine){
-        $quantityTotal += $cartLine->getProductCartQuantity();
-    }
+ 
 
 ?>
 
@@ -428,19 +425,15 @@ $cartLineList = $cart->getCartLineList()[0];
             
                     $cartLineList = $cart->getCartLineList()[0];
 
-                    $cartQuantity = $cartManager->getCartQuantity();
-                    $totalPrice = 0;
                     if($cartLineList != null){
                     foreach($cartLineList as $value){
                 ?>
-                    <?php $totalPrice = ($totalPrice + $value->getProduct()->getPrice()) * $value->getProductCartQuantity()?>
                     <li class="aside-product-list-item">
                         <a href="#/" class="remove">×</a>
                         <a href="product-details.php">
                             <img src="../img/<?php echo $value->getProduct()->getImage()?>"  width="68" height="84" alt="Image">
                             <span class="product-title"><?= $value->getProduct()->getName() ?></span>
                         </a>
-                        <span class="product-price"><?=$value->getProductCartQuantity()?> × <?= $value->getProduct()->getPrice() ?> DH</span>
                     </li>
                     <?php } }?>
                 </ul>

@@ -18,12 +18,9 @@ if(isset($_POST['id'])){
     $product = $cartManager->afficherProduit($id);
     
     $cartLine->setIdCart($cart->getId());
-    $quantityTotal = 0;
+
     $cartLineList = $cart->getCartLineList()[0];
-  
-        foreach($cartLineList as $cartLine){
-            $quantityTotal += $cartLine->getProductCartQuantity();
-        }
+
     
     $cartManager->addProduct($cart, $product);
 

@@ -96,11 +96,6 @@ if(!empty($_POST)){
                             <a href="Ajoute.php">
                                 <i class="far fa-check-square"></i>Insérer</a>
                         </li>
-                        <li>
-                            <a href="Recherche.php">
-                                <i class="fas fa-search"></i>Recherche</a>
-                                
-                        </li>
                         </li>
                      
                     </ul>     

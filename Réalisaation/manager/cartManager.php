@@ -59,7 +59,6 @@ class CartManager {
             $cartLine->setIdCartLine($value['idCartLine']);
             $cartLine->setIdCart($value['idCart']);
             $cartLine->setIdProduct($value['idProduct']);
-            $cartLine->setProductCartQuantity($value['productCartQuantity']);
             $product->setId($value['id_produit']);
             $product->setName($value['nom_produit']);
             $product->setDescription($value['description']);
@@ -95,7 +94,6 @@ class CartManager {
         foreach ($result as $value_Data) {
             $product->setId($value_Data['id_produit']);
             $product->setName($value_Data['nom_produit']);
-            $product->setPrice($value_Data['prix']);
             $product->setDescription($value_Data['description']);
             $produit->setReference($value_Data['reference']);      
             $product->setCategory($value_Data['categorie_produit']);
@@ -108,11 +106,7 @@ class CartManager {
 
       }
 
-      public function getCartQuantity(){
-          if(isset($_SESSION["quantity"])){
-              return $_SESSION["quantity"];
-          }
-      }
+
 
           //supprimer session
     public function delete($id){
@@ -132,16 +126,12 @@ class CartManager {
         $cartLine->setIdCartLine($result['idCartLine']);
         $cartLine->setIdCart($result['idCart']);
         $cartLine->setIdProduct($result['idProduct']);
-        $cartLine->setProductCartQuantity($result['productCartQuantity']);
         
         $product = new Product();
         $product->setId($result['id_produit']);
         $product->setName($result['nom_produit']);
-        $product->setPrice($result['prix']);
         $product->setDescription($result['description']);
         $produit->setReference($value_Data['reference']);      
-        $product->setDateOfExpiration($result["date_d'expiration"]);
-        $product->setQuantity($result['quantite_stock']);
         $product->setCategory($result['categorie_produit']);
         $product->setImage($result['photo']);
 
@@ -151,11 +141,11 @@ class CartManager {
     }
 
     // Edit  cart line
-    public function editCartLine($idCartLine, $quantity){
-        $sql = "UPDATE cart_line SET productCartQuantity = '$quantity' WHERE idCartLine=$idCartLine";
-        mysqli_query($this->getConnection(), $sql);
+    // public function editCartLine($idCartLine, $quantity){
+    //     $sql = "UPDATE cart_line SET productCartQuantity = '$quantity' WHERE idCartLine=$idCartLine";
+    //     mysqli_query($this->getConnection(), $sql);
         
-    }
+    // }
 
   
   
@@ -251,11 +241,8 @@ public function getAllProducts(){
             $product = new Product();
             $product->setId($result['id_produit']);
             $product->setName($result['nom_produit']);
-            $product->setPrice($result['prix']);
             $product->setDescription($result['description']);
             $produit->setReference($value_Data['reference']);      
-            $product->setDateOfExpiration($result["date_d'expiration"]);
-            $product->setQuantity($result['quantite_stock']);
             $product->setCategory($result['categorie_produit']);
             $product->setImage($result['photo']);
             

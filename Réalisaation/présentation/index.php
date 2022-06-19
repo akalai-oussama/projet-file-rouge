@@ -12,19 +12,15 @@ $dataa = $gestion->afficherCatigories();
 $cartManager = new CartManager();
 $cartManager->initCode();
 
-$quantity = $cartManager->getCartQuantity();
 
 
 $data = $cartManager->getAllProducts();
 if(isset($_COOKIE['cartCookie'])){
 $cart = $cartManager->getCart($_COOKIE['cartCookie']);
 
-$quantityTotal = 0;
 $cartLineList = $cart->getCartLineList()[0];
 
-    foreach($cartLineList as $cartLine){
-        $quantityTotal += $cartLine->getProductCartQuantity();
-    }
+
 }
 ?>
 
@@ -134,11 +130,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                     data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasCart"
                                     aria-controls="AsideOffcanvasCart">
                                     <span class="icon">
-                                        <span>
-                                            <?php 
-                                                echo $quantityTotal 
-                                            ?>
-                                        </span>
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -155,7 +146,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                     </span>
                                 </button>
 
-                                <a class="header-action-btn" href="my-account.php">
+                                <a class="header-action-btn" href="../login-signUp/login.php">
                                     <span class="icon">
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -257,10 +248,10 @@ $cartLineList = $cart->getCartLineList()[0];
                                                 >
                                                    </a>
                                         <div class="product-action">
-                                            <button type="button" class="product-action-btn action-btn-quick-view"
+                                            <!-- <button type="button" class="product-action-btn action-btn-quick-view"
                                                 value="<?php echo $value->getId() ?>" data-bs-toggle="modal"
                                                 data-bs-target="#action-QuickViewModal">
-                                                <i class="fa fa-expand"></i>
+                                                <i class="fa fa-expand"></i> -->
 
                                             </button>
                                             <button type="button" class="product-action-btn action-btn-cart"
@@ -270,10 +261,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                                 data-product-name=<?php echo urlencode($value->getName())?>>
                                                 <span>ajouter à favoriser</span>
                                             </button>
-                                            <button type="button" class="product-action-btn action-btn-wishlist"
-                                                data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
-                                                <i class="fa fa-heart-o"></i>
-                                            </button>
+
                                         </div>
                                            
                                     </div>
@@ -561,12 +549,9 @@ $cartLineList = $cart->getCartLineList()[0];
             
                     $cartLineList = $cart->getCartLineList()[0];
 
-                    $cartQuantity = $cartManager->getCartQuantity();
-                    $totalPrice = 0;
                     if($cartLineList != null){
                     foreach($cartLineList as $value){
                 ?>
-                        <?php $totalPrice = ($totalPrice + $value->getProduct()->getPrice()) * $value->getProductCartQuantity()?>
                         <li class="aside-product-list-item">
                             <a href="#/" class="remove">×</a>
                             <a href="product-details.php">

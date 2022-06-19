@@ -6,14 +6,10 @@ $cartManager = new CartManager();
 
 $cartManager->initCode();
 $cart = $cartManager->getCart($_COOKIE['cartCookie']);
-$quantity = $cartManager->getCartQuantity();
 
-$quantityTotal = 0;
 $cartLineList = $cart->getCartLineList()[0];
 
-    foreach($cartLineList as $cartLine){
-        $quantityTotal += $cartLine->getProductCartQuantity();
-    }
+
 ?>
 <!DOCTYPE php>
 <php class="no-js" lang="zxx">
@@ -85,7 +81,6 @@ $cartLineList = $cart->getCartLineList()[0];
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <rect class="icon-rect" width="30" height="30" fill="url(#pattern1)" />
                                             <defs>
                                                 <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1"
                                                     height="1">
@@ -102,15 +97,10 @@ $cartLineList = $cart->getCartLineList()[0];
                                     data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasCart"
                                     aria-controls="AsideOffcanvasCart">
                                     <span class="icon">
-                                        <span>
-                                            <?php 
-                                                echo $quantityTotal 
-                                            ?>
-                                        </span>
+
                                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <rect class="icon-rect" width="30" height="30" fill="url(#pattern2)" />
                                             <defs>
                                                 <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1"
                                                     height="1">
@@ -188,13 +178,10 @@ $cartLineList = $cart->getCartLineList()[0];
             
                                     $cartLineList = $cart->getCartLineList()[0];
 
-                                    $cartQuantity = $cartManager->getCartQuantity();
-                                    $totalPrice = 0;
                                     if($cartLineList != null){
                                     foreach($cartLineList as $value){
                                         
                                 ?>
-                                <?php $totalPrice = ($totalPrice + $value->getProduct()->getPrice()) * $value->getProductCartQuantity()?>
 
                                     <tr class="tbody-item">
                                         <td class="product-remove">

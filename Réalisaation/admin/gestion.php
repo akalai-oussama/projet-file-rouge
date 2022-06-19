@@ -124,7 +124,7 @@ class Gestion{
     }
     // suprimmer
     public function Supprimer($id){
-        $RowDelet = "DELETE FROM produit WHERE nom_produit= 'kolabi'";
+        $RowDelet = "DELETE FROM produit WHERE id_produit= '$id'";
         mysqli_query($this->getConnection(), $RowDelet);
     
     }
